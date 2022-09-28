@@ -1,0 +1,49 @@
+'''
+QUESTION:
+Write program to reverse a number is discussed here. 
+We can reverse a number using loop and arithmetic operators in both iterative and recursive approaches. 
+
+Input & Output Format:
+Input consists of a integer.
+Output consists of reversed input.
+
+Sample Input: 
+13579
+
+Sample Output: 
+97531
+
+'''
+
+# PROGRAM (Answer):
+
+#1st Method to write this program
+n = int(input())
+pal = 0
+while n >0:
+    r=n%10
+    pal = pal*10 + r
+    n = n//10
+print(pal)
+
+'''
+#2nd Method to write this program
+def rev(n,ans):
+    if n == 0:
+        return ans
+    else:
+        rem = n%10
+        ans = ans*10 + rem
+        n=n//10
+        return rev(n,ans)
+        
+a = int(input())
+print(rev(a,0))
+'''
+
+'''
+#3rd Method to write this program
+n = input()
+rev = n[::-1]
+print(rev)
+'''
