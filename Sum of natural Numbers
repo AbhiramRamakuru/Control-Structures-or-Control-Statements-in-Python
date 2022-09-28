@@ -1,0 +1,30 @@
+'''
+QUESTION:
+Write a program to find the sum of first N natural numbers.
+
+Input & Output Format:
+Input consists of one integer.
+Output consists of a integer.
+
+Sample Input & Output:
+5
+15
+
+'''
+
+# PROGRAM (Answer):
+
+# 1st Method
+n = int(input())
+k=0
+for i in range(n+1):
+    k=k+i
+print(k)
+
+
+
+'''
+# 2nd Method
+n = int(input())
+print(int(n*(n+1)/2))
+'''
