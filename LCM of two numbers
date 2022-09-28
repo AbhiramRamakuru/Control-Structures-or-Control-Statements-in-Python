@@ -1,0 +1,53 @@
+'''
+QUESTION:
+Write a program to find LCM of two numbers is discussed here. 
+Two numbers are obtained as input and the prime factors of both the numbers are found. 
+The product of the union of prime factors of both the numbers gives the LCM of the two numbers.
+
+Input & Output Format:
+Input consists of two integers.
+Output consists of the lcm of two numbers.
+
+Sample Input:
+5
+30
+
+Sample Output:
+LCM of 5 and 30 is 30
+
+'''
+
+# PROGRAM (Answer):
+
+# 1st Method
+n1 = int(input())
+n2 = int(input())
+#Euclid's Algorithm to find GCD or HCF
+def gcd(m,n):
+    if m%n==0:
+        return n
+    else:
+        r=m%n
+        return gcd(n,r)
+        
+#Euclid's Algorithm to find LCM
+LCM = int((n1*n2)/gcd(n1,n2))
+print(f"LCM of {n1} and {n2} is {LCM}")
+
+'''
+# 2nd Method
+a = int(input())
+b = int(input())
+if a<0 or b<0:
+	print("Invalid Input")
+elif a==0 or b==0:
+	print(0)
+else:
+	i=1
+	while (a>0 and b>0):
+		if i%a==0 and i%b==0:
+			break
+		else:
+			i=i+1
+print(f"LCM of {a} and {b} is {i}")
+'''
