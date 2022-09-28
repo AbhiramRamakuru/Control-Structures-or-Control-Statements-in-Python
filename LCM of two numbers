@@ -36,6 +36,24 @@ print(f"LCM of {n1} and {n2} is {LCM}")
 
 '''
 # 2nd Method
+a=int(input())
+b=int(input())
+#max=max(a,b)
+if a>b:
+    max=a
+else:
+    max=b
+i=1
+while True:
+    tab=max*i
+    if tab%a==0 and tab%b==0:
+        print(f"LCM of {a} and {b} is {tab}")
+        break
+    i+=1
+'''
+
+'''
+# 3rd Method
 a = int(input())
 b = int(input())
 if a<0 or b<0:
